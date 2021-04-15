@@ -1,4 +1,4 @@
-# Random_Password_Generator
+# Random Password Generator
  
 A program written in JavaScript that generates random passwords with the user being able to:
 
