@@ -9,14 +9,43 @@
 </head>
 <body>
     <div class="container">
-         <h1>Random Password Generator</h1>
-        <!--Password display field + Copy to clipboard button-->
-        <!--Password Length input area-->
-        <!--Include uppercase letters checkbox-->
-        <!--Include lowercase letters checkbox-->
-        <!--Include numbers checkbox-->
-        <!--Include symbols checkbox-->
-        <!--'Generate Password' Button -->
+        <h1>Random Password Generator</h1>
+        <div class="result-row">
+            <!--Password display field + Copy to clipboard button-->
+            <span id="resultpass">OUTPUT FIELD</span>
+            <button id="clipboard" class="btn btn-clip">Clipboard Icon</button>
+        </div>
+        <div class="settings-panel">
+            <div class="setting">
+                <!--Password Length input area-->
+                <label for="pass-length">Password length</label>
+                <input type="range" id="pass-length" min="8" max="20"value="14" >
+            </div>
+            <div class="setting">
+                <!--Include uppercase letters checkbox-->
+                <label for="incluppercase">Include uppercase letters</label>
+                <input type="checkbox" id="incluppercase" checked>
+            </div>
+            <div class="setting">
+                <!--Include lowercase letters checkbox-->
+                <label for="incllowercase">Include lowercase letters</label>
+                <input type="checkbox" id="incllowercase" checked>
+            </div>
+            <div class="setting">
+                <!--Include numbers checkbox-->
+                <label for="inclnumbers">Include numbers</label>
+                <input type="checkbox" id="inclnumbers" checked>
+            </div>
+            <div class="setting">
+                <!--Include symbols checkbox-->
+                <label for="inclsymbols">Include symbols</label>
+                <input type="checkbox" id="inclsymbols" checked>
+            </div>
+            <!--'Generate Password' Button -->
+            <button id="generate" class="btn btn-generate">Generate Password</button>
+        </div>
+         
+         
     </div>
    
 </body>
