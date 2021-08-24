@@ -8,6 +8,21 @@ const symbolsElement = document.getElementById('inclsymbols');
 const generateButtonElement = document.getElementById('generate');
 const clipboardButtonElement = document.getElementById('clipboard');
 
+// Copying to clipboard:
+clipboardButtonElement.addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+	const password = resultElement.innerText;
+	
+	if(!password) { return; }
+	
+	textarea.value = password;
+	document.body.appendChild(textarea);
+	textarea.select();
+	document.execCommand('copy');
+	textarea.remove();
+	alert('Password copied to clipboard');
+})
+
 // Object with all the generator functions:
 const functionSet = {
     upper: generateRandomUpperLetter,
@@ -77,7 +92,3 @@ function generateRandomSymbol () {
     return symbolSet[Math.floor(Math.random()*symbolSet.length)];
 }
 
-// Copying to clipboard:
-clipboardButtonElement.addEventListener('click', () => {
-
-})
