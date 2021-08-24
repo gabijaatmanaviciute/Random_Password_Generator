@@ -44,5 +44,6 @@ body {
     justify-content: flex-end;
 }
 .btn.btn-generate {
+    margin-top: 20px;
     width: 100%;
 }
